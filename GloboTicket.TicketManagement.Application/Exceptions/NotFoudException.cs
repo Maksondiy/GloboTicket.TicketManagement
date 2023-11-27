@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GloboTicket.TicketManagement.Application.Exeptions
+namespace GloboTicket.TicketManagement.Application.Exceptions
 {
     public class NotFoudException : Exception
     {
