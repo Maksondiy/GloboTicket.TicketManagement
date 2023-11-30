@@ -15,9 +15,9 @@ namespace GloboTicket.TicketManagement.Persistence.Repositories
         {
         }
 
-        public Task<bool> IsRoomNumberUnique(Guid roomid)
+        public Task<bool> IsRoomNumberUnique(string number)
         {
-            var matches = _dbContext.Rooms.Any(e => e.RoomId.Equals(roomid));
+            var matches = _dbContext.Rooms.Any(e => e.roomNumber.Equals(number));
             return Task.FromResult(matches);
         }
     }

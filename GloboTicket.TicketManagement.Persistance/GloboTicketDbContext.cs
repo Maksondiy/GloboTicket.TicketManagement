@@ -16,7 +16,7 @@ namespace GloboTicket.TicketManagement.Persistence
         public DbSet<Event> Events { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Order> Orders { get; set; }
-
+        public DbSet<RoomCategory> roomCategories { get; set; }
         public DbSet<Room> Rooms { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

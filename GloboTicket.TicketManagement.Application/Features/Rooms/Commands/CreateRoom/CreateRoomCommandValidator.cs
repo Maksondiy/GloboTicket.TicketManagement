@@ -24,7 +24,7 @@ namespace GloboTicket.TicketManagement.Application.Features.Rooms.Commands.Creat
         }
         private async  Task<bool> IsRoomNumberUnique(CreateRoomCommand e, CancellationToken token)
         {
-            return !(await _roomRepository.IsRoomNumberUnique(e.RoomId));
+            return !(await _roomRepository.IsRoomNumberUnique(e.roomNumber));
         }
     }
 }

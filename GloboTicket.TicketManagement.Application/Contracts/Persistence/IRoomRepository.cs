@@ -10,6 +10,6 @@ namespace GloboTicket.TicketManagement.Application.Contracts.Persistence
 {
     public interface IRoomRepository : IAsyncRepository<Room>
     {
-        Task<bool> IsRoomNumberUnique(Guid roomid);
+        Task<bool> IsRoomNumberUnique(string number);
     }
 }

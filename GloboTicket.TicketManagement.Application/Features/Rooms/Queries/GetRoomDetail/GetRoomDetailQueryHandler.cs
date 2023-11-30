@@ -21,14 +21,14 @@ namespace GloboTicket.TicketManagement.Application.Features.Rooms.Queries.GetRoo
         public async Task<RoomDetailVm> Handle(GetRoomDetailQuery request, CancellationToken cancellationToken)
         {
             var @room = await _roomRepository.GetByIdAsync(request.Id);
-            var eventDetailDto = _mapper.Map<RoomDetailVm>(@room);
+            var roomDetailDto = _mapper.Map<RoomDetailVm>(@room);
 
-            var category = await _roomcategoryRepository.GetByIdAsync(@room.RoomId);
+            var roomcategory = await _roomcategoryRepository.GetByIdAsync(@room.CategoryId);
 
 
-            eventDetailDto.Category = _mapper.Map<RoomCategoryDto>(category);
+            roomDetailDto.Category = _mapper.Map<RoomCategoryDto>(roomcategory);
 
-            return eventDetailDto;
+            return roomDetailDto;
         }
     }
 }
