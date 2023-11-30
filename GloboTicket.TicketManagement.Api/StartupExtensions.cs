@@ -36,6 +36,7 @@ namespace GloboTicket.TicketManagement.Api
                 app.UseSwaggerUI(c =>
                 {
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "GloboTicket Management API");
+                    c.DisplayOperationId();
                 });
             }
 
